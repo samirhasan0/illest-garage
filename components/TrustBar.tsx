@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { business } from "@/lib/business";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { asset } from "@/lib/basePath";
 
 const specialties = ["General Repair", "European, Domestic & Japanese", "Performance & Tuning"];
 
@@ -9,14 +10,14 @@ export default function TrustBar() {
     <section className="group relative flex min-h-[48vh] items-center overflow-hidden border-y border-panel-border bg-bg">
       <div className="absolute inset-0">
         <Image
-          src="/hero/sec2.webp"
+          src={asset("/hero/sec2.webp")}
           alt=""
           fill
           sizes="100vw"
           className="hidden object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 md:block"
         />
         <Image
-          src="/hero/sec2-mobile.webp"
+          src={asset("/hero/sec2-mobile.webp")}
           alt=""
           fill
           sizes="100vw"

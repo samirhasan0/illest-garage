@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { euroMakes, moreMakes } from "@/lib/business";
+import { asset } from "@/lib/basePath";
 
 export default function LogoMarquee() {
   const logos = [...euroMakes, ...moreMakes].filter((make) => make.logo);
@@ -14,7 +15,7 @@ export default function LogoMarquee() {
             className="flex h-16 w-36 shrink-0 items-center justify-center px-6"
           >
             <Image
-              src={make.logo!}
+              src={asset(make.logo!)}
               alt={make.name}
               width={64}
               height={64}

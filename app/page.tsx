@@ -15,6 +15,7 @@ import LogoGlitchIn from "@/components/LogoGlitchIn";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { business, euroMakes } from "@/lib/business";
+import { asset } from "@/lib/basePath";
 
 export const metadata: Metadata = pageMetadata({
   title: `${business.name} | Performance, European & General Auto Repair — Dallas, GA`,
@@ -33,14 +34,14 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-bg py-20">
         <div className="absolute inset-x-0 top-1/2 aspect-[16/7] w-full -translate-y-1/2">
           <Image
-            src="/hero/section3.webp"
+            src={asset("/hero/section3.webp")}
             alt=""
             fill
             sizes="100vw"
             className="hidden object-cover object-center sm:block"
           />
           <Image
-            src="/hero/section3-mobile.webp"
+            src={asset("/hero/section3-mobile.webp")}
             alt=""
             fill
             sizes="100vw"
@@ -107,7 +108,7 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden bg-bg py-20">
         <div className="absolute inset-x-0 top-1/2 aspect-[16/7] w-full -translate-y-1/2">
-          <Image src="/hero/parts-bg.webp" alt="" fill sizes="100vw" className="object-cover object-center" />
+          <Image src={asset("/hero/parts-bg.webp")} alt="" fill sizes="100vw" className="object-cover object-center" />
         </div>
 
         <div className="relative">
@@ -121,7 +122,7 @@ export default function HomePage() {
             decoration={
               <div className="panel relative aspect-video overflow-hidden">
                 <Image
-                  src="/hero/parts.webp"
+                  src={asset("/hero/parts.webp")}
                   alt="Performance parts and tools"
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
@@ -167,7 +168,7 @@ export default function HomePage() {
                 <div className="speed-streaks opacity-30" />
                 <LogoGlitchIn className="relative w-[70%] max-w-sm">
                   <Image
-                    src="/brand/logo-bg.webp"
+                    src={asset("/brand/logo-bg.webp")}
                     alt="The Illest Garage"
                     width={924}
                     height={574}

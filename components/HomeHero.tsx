@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { business } from "@/lib/business";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { asset } from "@/lib/basePath";
 
 const hasVideo = !business.heroVideoSrc.startsWith("[");
 
@@ -20,14 +21,14 @@ export default function HomeHero() {
             muted
             loop
             playsInline
-            poster="/hero/back1.webp"
+            poster={asset("/hero/back1.webp")}
           >
             <source src={business.heroVideoSrc} type="video/mp4" />
           </video>
         ) : (
           <>
             <Image
-              src="/hero/back1.webp"
+              src={asset("/hero/back1.webp")}
               alt=""
               fill
               priority
@@ -35,7 +36,7 @@ export default function HomeHero() {
               className="hidden object-cover object-center md:block"
             />
             <Image
-              src="/hero/back1-mobile.webp"
+              src={asset("/hero/back1-mobile.webp")}
               alt=""
               fill
               priority

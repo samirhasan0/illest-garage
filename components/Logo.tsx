@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/basePath";
 
 export default function Logo({ size = "header" }: { size?: "header" | "footer" }) {
   const imgClass = size === "header" ? "h-14 sm:h-16" : "h-11 sm:h-12";
@@ -7,7 +8,7 @@ export default function Logo({ size = "header" }: { size?: "header" | "footer" }
   return (
     <span className="flex items-center gap-3">
       <Image
-        src="/brand/logo-wordmark.webp"
+        src={asset("/brand/logo-wordmark.webp")}
         alt="The Illest Garage"
         width={910}
         height={568}
